@@ -868,7 +868,7 @@ init_container()
         if ! readlink /etc/resolv.conf >/dev/null 2>&3; then
             if ! (cd /etc 2>&3 \
                   && unlink resolv.conf 2>&3 \
-                  && ln --symbolic /run/host/etc/resolv.conf resolv.conf 2>&3); then
+                  && ln --symbolic /run/host/monitor/resolv.conf resolv.conf 2>&3); then
                 echo "$base_toolbox_command: failed to redirect /etc/resolv.conf to /run/host/etc/resolv.conf" >&2
                 return 1
             fi
