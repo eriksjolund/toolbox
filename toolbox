@@ -791,6 +791,7 @@ create()
             --volume "$dbus_system_bus_path":"$dbus_system_bus_path" \
             --volume /etc:/run/host/etc \
             --volume /dev:/dev:rslave \
+            --volume /tmp/.X11-unix:/tmp/.X11-unix \
             --volume /media:/media:rslave \
             --volume /mnt:/mnt:rslave \
             --volume /run/media:/run/media:rslave \
